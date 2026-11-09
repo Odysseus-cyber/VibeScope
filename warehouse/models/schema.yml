@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: dwd_applications
+    description: 每个GitHub repository ID一行；正式统计池为应用且有明确AI开发证据。
+    columns:
+      - name: app_id
+        tests: [unique, not_null]
+      - name: category
+        tests: [not_null]
+  - name: dwd_snapshots
+    description: UTC日快照；同一应用每日最后一次成功观测，不回填未知历史。
+    columns:
+      - name: snapshot_id
+        tests: [unique, not_null]
+      - name: app_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dwd_applications')
+                field: app_id
+      - name: snapshot_date
+        tests: [not_null]
+  - name: dwd_discussions
+    columns:
+      - name: discussion_id
+        tests: [unique, not_null]
+      - name: app_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dwd_applications')
+                field: app_id
+  - name: dws_daily_metrics
+    columns:
+      - name: snapshot_date
+        tests: [unique, not_null]
+  - name: ads_app_metrics
+    columns:
+      - name: app_id
+        tests: [unique, not_null]
+      - name: as_of
+        tests: [not_null]
+  - name: ads_category_metrics
+    columns:
+      - name: category
+        tests: [unique, not_null]
+  - name: ads_tool_metrics
+    columns:
+      - name: tool
+        tests: [unique, not_null]

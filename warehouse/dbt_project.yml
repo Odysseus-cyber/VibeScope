@@ -1,0 +1,20 @@
+name: vibescope
+version: '1.0.0'
+config-version: 2
+profile: vibescope
+model-paths: [models]
+test-paths: [tests]
+macro-paths: [macros]
+target-path: "{{ env_var('DBT_TARGET_PATH', 'target') }}"
+clean-targets: [target, dbt_packages]
+models:
+  vibescope:
+    dwd:
+      +schema: dwd
+      +materialized: view
+    dws:
+      +schema: dws
+      +materialized: view
+    ads:
+      +schema: ads
+      +materialized: view

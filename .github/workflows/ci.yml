@@ -1,0 +1,56 @@
+name: Verify VibeScope
+on: [push, pull_request]
+jobs:
+  backend-and-warehouse:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: vibescope
+          POSTGRES_PASSWORD: ci-only-password
+          POSTGRES_DB: vibescope
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U vibescope -d vibescope"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATA_MODE: demo
+      DATABASE_URL: postgresql+psycopg://vibescope:ci-only-password@localhost:5432/vibescope
+      DBT_HOST: localhost
+      DBT_USER: vibescope
+      DBT_PASSWORD: ci-only-password
+      DBT_DBNAME: vibescope
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install uv==0.9.11
+      - run: uv sync --frozen --project backend
+      - run: backend/.venv/bin/python -m pytest backend/tests -q
+      - run: backend/.venv/bin/python data/evaluation/evaluate.py
+      - name: Migrate, seed, and verify warehouse
+        working-directory: backend
+        env:
+          WAREHOUSE_ENABLED: 'true'
+        run: |
+          export PATH="$PWD/.venv/bin:$PATH"
+          python -m app.cli init
+          python -m app.cli seed
+          python -m app.cli warehouse
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build

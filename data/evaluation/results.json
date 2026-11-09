@@ -1,0 +1,927 @@
+{
+  "evaluated_at": "2026-11-09T07:59:30.313073+00:00",
+  "dataset_type": "curated synthetic specification cases",
+  "method": "deterministic-rules-v1",
+  "sample_count": 40,
+  "field_accuracy": {
+    "category": 1.0,
+    "kind": 1.0,
+    "evidence_level": 1.0,
+    "tools": 1.0
+  },
+  "explicit_precision": 1.0,
+  "explicit_recall": 1.0,
+  "limitation": "Synthetic specification cases only; these scores do not estimate real-world performance or validate an LLM provider. Human real-project review remains pending.",
+  "cases": [
+    {
+      "id": "SYN-001",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-002",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-003",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      },
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      }
+    },
+    {
+      "id": "SYN-004",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Lovable"
+        ]
+      },
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Lovable"
+        ]
+      }
+    },
+    {
+      "id": "SYN-005",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Bolt"
+        ]
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Bolt"
+        ]
+      }
+    },
+    {
+      "id": "SYN-006",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Replit"
+        ]
+      },
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Replit"
+        ]
+      }
+    },
+    {
+      "id": "SYN-007",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Windsurf"
+        ]
+      },
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Windsurf"
+        ]
+      }
+    },
+    {
+      "id": "SYN-008",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "GitHub Copilot"
+        ]
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "GitHub Copilot"
+        ]
+      }
+    },
+    {
+      "id": "SYN-009",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Gemini CLI"
+        ]
+      },
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Gemini CLI"
+        ]
+      }
+    },
+    {
+      "id": "SYN-010",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "v0"
+        ]
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "v0"
+        ]
+      }
+    },
+    {
+      "id": "SYN-011",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code",
+          "Cursor"
+        ]
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code",
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-012",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      },
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-013",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-014",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-015",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-016",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      },
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-017",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-018",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-019",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-020",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-021",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-022",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-023",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-024",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-025",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-026",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-027",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "其他",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "其他",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-028",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "resource",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "resource",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-029",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "教育学习",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "教育学习",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-030",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      },
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      }
+    },
+    {
+      "id": "SYN-031",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      },
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-032",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      },
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-033",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "未知",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "未知",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-034",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "其他",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "其他",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-035",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-036",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-037",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-038",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-039",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      },
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-040",
+      "correct": {
+        "category": true,
+        "kind": true,
+        "evidence_level": true,
+        "tools": true
+      },
+      "actual": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      },
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    }
+  ]
+}

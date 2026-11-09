@@ -1,0 +1,25 @@
+version: 2
+sources:
+  - name: operational
+    schema: public
+    description: FastAPI/worker 保存的业务实体及追加观测；原始响应保存在 raw_records。
+    tables:
+      - name: raw_records
+      - name: applications
+        columns:
+          - name: id
+            tests: [unique, not_null]
+      - name: snapshots
+        columns:
+          - name: id
+            tests: [unique, not_null]
+          - name: app_id
+            tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('operational', 'applications')
+                    field: id
+      - name: discussions
+      - name: classifications
+      - name: coverage

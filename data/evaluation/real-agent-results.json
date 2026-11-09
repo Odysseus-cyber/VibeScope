@@ -1,0 +1,59 @@
+{
+  "dataset_type": "public GitHub README development review sample",
+  "review_status": "agent_reviewed; human review pending",
+  "sampling_policy": "32 repositories from an initial bounded topic:vibe-coding search, created within preceding 90 days. This initial sample exposed older-partition bias; production discovery was subsequently changed to newest partitions and author-declaration queries first. Not a random or representative ecosystem sample.",
+  "limitations": "Agent reviewed repository descriptions, README introductions and candidate author-development statements. Unblinded development sample; rules were refined on this set. Not independent human annotations or a held-out benchmark.",
+  "before_refinement": {
+    "sample_count": 32,
+    "kind_accuracy": 0.375,
+    "author_claim_accuracy": 0.8125,
+    "explicit_precision": 0.0,
+    "explicit_recall": 0.0,
+    "confusion_counts": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 2,
+      "tn": 26
+    }
+  },
+  "current_rule_snapshot": {
+    "sample_count": 32,
+    "kind_accuracy": 0.8438,
+    "author_claim_accuracy": 1.0,
+    "explicit_precision": 1.0,
+    "explicit_recall": 1.0,
+    "confusion_counts": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 30
+    }
+  },
+  "kind_errors": [
+    {
+      "repository": "sno-ai/sno-station",
+      "expected": "developer_tool",
+      "actual": "application"
+    },
+    {
+      "repository": "See-Sol-Lab/DeepSeekGUI",
+      "expected": "developer_tool",
+      "actual": "application"
+    },
+    {
+      "repository": "pliablepixels/gap-trap",
+      "expected": "developer_tool",
+      "actual": "application"
+    },
+    {
+      "repository": "ckryptickunal/OpenDesigner",
+      "expected": "developer_tool",
+      "actual": "application"
+    },
+    {
+      "repository": "digitaldonusum/vibebreaker",
+      "expected": "developer_tool",
+      "actual": "application"
+    }
+  ]
+}

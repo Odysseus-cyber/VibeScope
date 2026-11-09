@@ -1,0 +1,100 @@
+name: vibescope
+
+x-backend: &backend
+  image: vibescope-backend:local
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  environment: &backend-env
+    DATABASE_URL: postgresql+psycopg://vibescope:${DB_PASSWORD:?Run scripts/start.sh first}@db:5432/vibescope
+    DATA_MODE: ${DATA_MODE:-demo}
+    GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+    LLM_BASE_URL: ${LLM_BASE_URL:-}
+    LLM_API_KEY: ${LLM_API_KEY:-}
+    LLM_MODEL: ${LLM_MODEL:-}
+    TRACKING_LIMIT: ${TRACKING_LIMIT:-1000}
+    DAILY_CLASSIFICATION_LIMIT: ${DAILY_CLASSIFICATION_LIMIT:-100}
+    WAREHOUSE_ENABLED: "true"
+    WAREHOUSE_DIR: /srv/warehouse
+    DBT_PROJECT_DIR: /srv/warehouse
+    DBT_PROFILES_DIR: /srv/warehouse
+    DBT_TARGET_PATH: /srv/runtime/dbt/target
+    DBT_LOG_PATH: /srv/runtime/dbt/logs
+    DBT_HOST: db
+    DBT_PORT: "5432"
+    DBT_USER: vibescope
+    DBT_PASSWORD: ${DB_PASSWORD}
+    DBT_DBNAME: vibescope
+    TZ: UTC
+  volumes:
+    - ./warehouse:/srv/warehouse:ro
+    - runtime_data:/srv/runtime
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: vibescope
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Run scripts/start.sh first}
+      POSTGRES_DB: vibescope
+      TZ: UTC
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U vibescope -d vibescope"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  init:
+    <<: *backend
+    command:
+      - /bin/sh
+      - -ec
+      - |
+        python -m app.cli init
+        if [ "$$DATA_MODE" = "demo" ]; then python -m app.cli seed; fi
+        python -m app.cli warehouse
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    <<: *backend
+    command: [uvicorn, app.main:app, --host, 0.0.0.0, --port, "8000"]
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+    restart: unless-stopped
+
+  worker:
+    <<: *backend
+    command: [python, -m, app.worker]
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  frontend:
+    image: vibescope-frontend:local
+    build:
+      context: ./frontend
+    ports:
+      - "127.0.0.1:${WEB_PORT:-5180}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  runtime_data:

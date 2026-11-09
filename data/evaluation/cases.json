@@ -1,0 +1,481 @@
+{
+  "dataset_type": "curated synthetic specification cases",
+  "label_origin": "Manually authored expected behavior; synthetic text, not real repository labels. Human review of real-world samples remains a separate activity.",
+  "cases": [
+    {
+      "id": "SYN-001",
+      "description": "A personal task manager",
+      "readme": "This app was built with Claude Code.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-002",
+      "description": "A notes app",
+      "readme": "Built with Cursor.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-003",
+      "description": "An arcade game",
+      "readme": "This game was developed using Codex.",
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      }
+    },
+    {
+      "id": "SYN-004",
+      "description": "Vocabulary learning app",
+      "readme": "Created with Lovable.",
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Lovable"
+        ]
+      }
+    },
+    {
+      "id": "SYN-005",
+      "description": "A budget tracker",
+      "readme": "This application was built with Bolt.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Bolt"
+        ]
+      }
+    },
+    {
+      "id": "SYN-006",
+      "description": "A writing workspace",
+      "readme": "Made with Replit Agent.",
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Replit"
+        ]
+      }
+    },
+    {
+      "id": "SYN-007",
+      "description": "A data analytics dashboard",
+      "readme": "Built with Windsurf.",
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Windsurf"
+        ]
+      }
+    },
+    {
+      "id": "SYN-008",
+      "description": "A calendar app",
+      "readme": "This app was written using GitHub Copilot.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "GitHub Copilot"
+        ]
+      }
+    },
+    {
+      "id": "SYN-009",
+      "description": "A flashcard app",
+      "readme": "Created with Gemini CLI.",
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Gemini CLI"
+        ]
+      }
+    },
+    {
+      "id": "SYN-010",
+      "description": "A travel planner",
+      "readme": "Built with v0.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "v0"
+        ]
+      }
+    },
+    {
+      "id": "SYN-011",
+      "description": "A meal planner",
+      "readme": "This app was built with Claude Code and Cursor.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code",
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-012",
+      "description": "A puzzle game",
+      "readme": "This app was vibe-coded.",
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-013",
+      "description": "A bookmark manager",
+      "readme": "The app was written by AI.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-014",
+      "description": "A weather application",
+      "readme": "Created entirely with AI.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-015",
+      "description": "一个个人记账应用",
+      "readme": "本项目使用 Cursor 开发。",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-016",
+      "description": "一个学习记忆卡应用",
+      "readme": "全部代码由 AI 编写。",
+      "expected": {
+        "category": "教育学习",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-017",
+      "description": "An AI-powered image editor",
+      "readme": "Uses OpenAI API to edit images.",
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-018",
+      "description": "A document assistant",
+      "readme": "Powered by a large language model.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-019",
+      "description": "A task manager",
+      "readme": "Open the repository in Cursor.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-020",
+      "description": "A chess game",
+      "readme": "Includes instructions for Claude Code.",
+      "expected": {
+        "category": "游戏娱乐",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-021",
+      "description": "A finance app",
+      "readme": "This app was not built with Cursor.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-022",
+      "description": "A notes app",
+      "readme": "No AI tools were used to build this project.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-023",
+      "description": "A recipe application",
+      "readme": "Written manually by the author.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-024",
+      "description": "A music player",
+      "readme": "Read the installation instructions to begin.",
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-025",
+      "description": "A writing app",
+      "readme": "Supports Cursor integration.",
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-026",
+      "description": "A data visualization app",
+      "readme": "Built with Python and React.",
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-027",
+      "description": "A curated list of vibe coding apps",
+      "readme": "Examples of products built with Cursor.",
+      "expected": {
+        "category": "其他",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-028",
+      "description": "A starter template for task apps",
+      "readme": "Built with Claude Code.",
+      "expected": {
+        "category": "生产力",
+        "kind": "resource",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-029",
+      "description": "A tutorial for learning React",
+      "readme": "Learn to build apps with Cursor.",
+      "expected": {
+        "category": "教育学习",
+        "kind": "resource",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-030",
+      "description": "An AI coding assistant",
+      "readme": "This tool was developed with Codex.",
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Codex"
+        ]
+      }
+    },
+    {
+      "id": "SYN-031",
+      "description": "A code editor",
+      "readme": "A developer tool written using Cursor.",
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-032",
+      "description": "An MCP server for notes",
+      "readme": "Built with Claude Code.",
+      "expected": {
+        "category": "开发辅助",
+        "kind": "developer_tool",
+        "evidence_level": "explicit",
+        "tools": [
+          "Claude Code"
+        ]
+      }
+    },
+    {
+      "id": "SYN-033",
+      "description": "",
+      "readme": "",
+      "expected": {
+        "category": "未知",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-034",
+      "description": "A tiny utility",
+      "readme": "Source code and releases.",
+      "expected": {
+        "category": "其他",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-035",
+      "description": "A habit tracker",
+      "readme": "This app could be built with Cursor.",
+      "expected": {
+        "category": "生活方式",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-036",
+      "description": "A video editor",
+      "readme": "Built with OpenAI API for transcription.",
+      "expected": {
+        "category": "内容创作",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-037",
+      "description": "A focus timer",
+      "readme": "This project uses Cursor. Its code is written manually.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "weak",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-038",
+      "description": "一个待办应用",
+      "readme": "本项目并非使用 Cursor 开发。",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "unknown",
+        "tools": []
+      }
+    },
+    {
+      "id": "SYN-039",
+      "description": "An email organizer",
+      "readme": "Built with Cursor. It also supports GitHub Copilot instructions.",
+      "expected": {
+        "category": "生产力",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": [
+          "Cursor"
+        ]
+      }
+    },
+    {
+      "id": "SYN-040",
+      "description": "An analytics dashboard",
+      "readme": "AI-generated code is used throughout this project.",
+      "expected": {
+        "category": "数据分析",
+        "kind": "application",
+        "evidence_level": "explicit",
+        "tools": []
+      }
+    }
+  ]
+}

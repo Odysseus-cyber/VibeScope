@@ -1,0 +1,175 @@
+{
+  "executed_at": "2026-11-09T07:55:25.089356+00:00",
+  "mode": "live",
+  "authentication": "anonymous; no personal credentials",
+  "database": "isolated temporary SQLite",
+  "event_counts": {
+    "raw": 22,
+    "coverage": 6,
+    "repository": 4,
+    "discussion": 6
+  },
+  "row_counts": {
+    "applications": 4,
+    "snapshots": 4,
+    "raw_records": 22,
+    "coverage": 6,
+    "discussions": 6,
+    "classifications": 4
+  },
+  "classification_run": {
+    "classified": 4,
+    "remaining_daily_budget": 96
+  },
+  "unchanged_reclassification": {
+    "classified": 0,
+    "remaining_daily_budget": 96
+  },
+  "overview_kpis": {
+    "tracked": 4,
+    "eligible": 2,
+    "classified": 4,
+    "new_created": 2,
+    "new_discovered": 2,
+    "stars": 15,
+    "growth_7d": null,
+    "growth_7d_eligible": 0,
+    "coverage_days": 1
+  },
+  "report": {
+    "title": "2026-11-03 — 2026-11-09 应用观察摘要",
+    "method": "rules",
+    "source_count": 2
+  },
+  "repositories": [
+    {
+      "full_name": "PERSICO1851/BotWRecomp-macOS",
+      "url": "https://github.com/PERSICO1851/BotWRecomp-macOS",
+      "stars": 8,
+      "category": "游戏娱乐",
+      "kind": "application",
+      "evidence_level": "explicit",
+      "evidence": [
+        {
+          "quote": "By [Ishaan Kalra](https://github.com/IshaanKalra2103), built with Claude Code.",
+          "url": "https://github.com/PERSICO1851/BotWRecomp-macOS"
+        }
+      ],
+      "created_at": "2026-11-08 14:32:10",
+      "first_seen_at": "2026-11-09 07:55:21.744248"
+    },
+    {
+      "full_name": "silentprovider423/HomeFind",
+      "url": "https://github.com/silentprovider423/HomeFind",
+      "stars": 7,
+      "category": "开发辅助",
+      "kind": "application",
+      "evidence_level": "explicit",
+      "evidence": [
+        {
+          "quote": "> Built with help from [Claude Code](https://claude.com/claude-code): Apple's Find My was analysed by names and texts only (no decompiling, no Apple code), the Swift was written together with it.",
+          "url": "https://github.com/silentprovider423/HomeFind"
+        }
+      ],
+      "created_at": "2026-11-08 02:29:24",
+      "first_seen_at": "2026-11-09 07:55:22.061484"
+    },
+    {
+      "full_name": "jryang2026-code/MenuBarHome",
+      "url": "https://github.com/jryang2026-code/MenuBarHome",
+      "stars": 7,
+      "category": "其他",
+      "kind": "application",
+      "evidence_level": "weak",
+      "evidence": [
+        {
+          "quote": "### Local MCP Server (Claude Desktop / Claude Code / Cursor)",
+          "url": "https://github.com/jryang2026-code/MenuBarHome"
+        }
+      ],
+      "created_at": "2026-11-08 12:49:06",
+      "first_seen_at": "2026-11-09 07:55:22.428782"
+    },
+    {
+      "full_name": "Guuzzeji/otogi-xunchain",
+      "url": "https://github.com/Guuzzeji/otogi-xunchain",
+      "stars": 6,
+      "category": "游戏娱乐",
+      "kind": "application",
+      "evidence_level": "weak",
+      "evidence": [
+        {
+          "quote": "[Claude Code](https://claude.com/claude-code) wrote most of the project's own code (the Zig host, the graphics layer, the function overrides, widescreen, input and setup) and did much of the reverse engineering and debugging, working from logs, traces and screenshots of the running game.",
+          "url": "https://github.com/Guuzzeji/otogi-xunchain"
+        }
+      ],
+      "created_at": "2026-11-08 03:33:59",
+      "first_seen_at": "2026-11-09 07:55:22.746597"
+    }
+  ],
+  "source_coverage": [
+    {
+      "source": "github",
+      "status": "complete",
+      "detail": {
+        "query": "\"built with\" \"Claude Code\" in:readme created:2026-11-08..2026-11-09 fork:false archived:false",
+        "total_count": 767,
+        "incomplete_results": false,
+        "search_result_limit": 1000
+      }
+    },
+    {
+      "source": "github",
+      "status": "partial",
+      "detail": {
+        "stage": "summary",
+        "attempted_repositories": 4,
+        "errors": 0,
+        "tracking_limit": 4,
+        "since": "2026-08-11",
+        "limit_reached": true,
+        "sampling_policy": "author-declaration queries first; newest date partition first; stars descending within partition"
+      }
+    },
+    {
+      "source": "hn",
+      "status": "complete",
+      "detail": {
+        "feed": "newstories",
+        "listed": 500,
+        "maximum": 500,
+        "scope": "latest feed only; no historical completeness claim"
+      }
+    },
+    {
+      "source": "hn",
+      "status": "complete",
+      "detail": {
+        "feed": "showstories",
+        "listed": 183,
+        "maximum": 200,
+        "scope": "latest feed only; no historical completeness claim"
+      }
+    },
+    {
+      "source": "hn",
+      "status": "partial",
+      "detail": {
+        "stage": "sample_limit",
+        "max_items": 6,
+        "reason": "Explicit small-sample collection limit reached"
+      }
+    },
+    {
+      "source": "hn",
+      "status": "partial",
+      "detail": {
+        "stage": "summary",
+        "attempted_items": 6,
+        "errors": 0,
+        "oldest_posted_at": "2026-11-09T07:39:09+00:00",
+        "scope": "latest feeds plus previously tracked stories"
+      }
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "dataset_type": "public GitHub README development review sample",
+  "review_method": "Agent reviewed repository descriptions, README introductions and candidate author-development statements. Unblinded development sample; rules were refined on this set. Not independent human annotations or a held-out benchmark.",
+  "sampling_policy": "32 repositories from an initial bounded topic:vibe-coding search, created within preceding 90 days. This initial sample exposed older-partition bias; production discovery was subsequently changed to newest partitions and author-declaration queries first. Not a random or representative ecosystem sample.",
+  "positive_label_definition": "Explicit author statement that this repository/software was made with AI; using AI as a product feature and claims about third-party linked projects do not qualify.",
+  "kind_definition": "Applications serve end users; developer_tool denotes coding infrastructure, IDEs, developer integrations and audit CLIs; resource denotes lists, guides, prompt/skill packs, templates and component kits.",
+  "cases": [
+    {
+      "id": "REAL-001",
+      "repository": "lnkiai/m3e-canvas",
+      "source_url": "https://github.com/lnkiai/m3e-canvas",
+      "readme_url": "https://github.com/lnkiai/m3e-canvas/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.147180+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "浏览器画布与界面设计应用；生成提示词是产品功能，未见自身 AI 开发声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-002",
+      "repository": "ardeyouxipianyi/workbuddy2api-hub",
+      "source_url": "https://github.com/ardeyouxipianyi/workbuddy2api-hub",
+      "readme_url": "https://github.com/ardeyouxipianyi/workbuddy2api-hub/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.154149+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "本项目为 100% Vibe Coding 协同产物",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": true
+      },
+      "review_note": "多账号接口网关属于开发工具；README 明确自述本项目为 Vibe Coding 协同产物。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": true,
+        "evidence_level": "explicit"
+      }
+    },
+    {
+      "id": "REAL-003",
+      "repository": "kharmanskyi/open-steps",
+      "source_url": "https://github.com/kharmanskyi/open-steps",
+      "readme_url": "https://github.com/kharmanskyi/open-steps/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.159835+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Plain-language agent skills for Claude Code, Codex, Cursor and Gemini CLI: honest session reports, straight verdicts, steps you can follow. MIT.",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "向编码智能体提供说明型技能包；作者其他产品的 vibecoding 经历不足以验证当前技能包。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-004",
+      "repository": "sno-ai/sno-station",
+      "source_url": "https://github.com/sno-ai/sno-station",
+      "readme_url": "https://github.com/sno-ai/sno-station/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.165124+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "When Claude Code hits its usage limit, Codex picks the task up from the same memory. Sno Station puts Codex, Claude Code, Cursor, Hermes Agent and OpenClaw on one squad: they hand work to each other and review each other",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "编码智能体协同与审查平台；功能描述不能视为自身开发方式声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-005",
+      "repository": "himovo/movo",
+      "source_url": "https://github.com/himovo/movo",
+      "readme_url": "https://github.com/himovo/movo/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.168282+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Turn DeepSeek Harness into a self-hosted enterprise Agent platform with knowledge, deep research, content generation, vibe coding, browser automation, governance, and admin controls.",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向企业的知识、研究和内容工作平台；vibe coding 是功能之一，开发方式未确认。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-006",
+      "repository": "shuishuipingan/qoder2api-hub",
+      "source_url": "https://github.com/shuishuipingan/qoder2api-hub",
+      "readme_url": "https://github.com/shuishuipingan/qoder2api-hub/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.169837+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Qoder国际国内多账号反代网关，Qoder 国际国内双区多账号 OpenAI 兼容网关中枢 — COSY 签名推理、稳定设备指纹防风控、OAuth 设备授权免客户端登录、每日签到与 Pro 福利、后台定时调度器、Web 监控看板，支持 Codex / Claude Code 与标准 OpenAI 客户端",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "API 反代网关；兼容 Claude Code 或 Codex 不等于由这些工具开发。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-007",
+      "repository": "vicoa-ai/vicoa",
+      "source_url": "https://github.com/vicoa-ai/vicoa",
+      "readme_url": "https://github.com/vicoa-ai/vicoa/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.172821+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Vicoa is the agentic IDE for running a team of coding agents from desktop, mobile, VPS. Open-source, self-hostable.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "作者明确定位为 agentic IDE；工具支持列表不证明创作方式。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-008",
+      "repository": "MartinDelophy/awesome-gpt-6-astra",
+      "source_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+      "readme_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.200287+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "A curated collection of fun games built with GPT-6 Astra, with source code, demos, and prompts. | GPT-6 Astra 游戏精选",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "其他作者的游戏案例集合；条目中的第三方创作声明不归属于此目录自身。",
+      "prediction_before_review": {
+        "kind": "resource",
+        "ai_development_confirmed": true
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-009",
+      "repository": "AGIHunt/blurt",
+      "source_url": "https://github.com/AGIHunt/blurt",
+      "readme_url": "https://github.com/AGIHunt/blurt/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.204505+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "The keyboard for the agent era: dictation, copy text from screen, translation, snaps and screen recordings for Claude Code, Codex and your other agents. Free, open source, Mac. 口喷鸡：Agent 时代的输入法。",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向用户的语音、剪贴和录屏输入应用；与编码工具联动是功能。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-010",
+      "repository": "alchaincyf/3d-vibe-coding-handbook",
+      "source_url": "https://github.com/alchaincyf/3d-vibe-coding-handbook",
+      "readme_url": "https://github.com/alchaincyf/3d-vibe-coding-handbook/blob/master/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.205737+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "《3D Vibe Coding 手册》配套仓库：书的 HTML 版、demo 源码、工具脚本与资源包索引",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "手册配套文档、示例与资源仓库；未将示例资产创作方式转作整个仓库证据。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-011",
+      "repository": "See-Sol-Lab/DeepSeekGUI",
+      "source_url": "https://github.com/See-Sol-Lab/DeepSeekGUI",
+      "readme_url": "https://github.com/See-Sol-Lab/DeepSeekGUI/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.209247+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "基于 DeepSeek Harness（DSH）的稳定桌面端，集成Git、内置浏览器与记忆功能 | DeepSeek Harness desktop GUI with local workspaces, Git, browser and memory.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "带 Git、代码修改、命令执行的 AI 开发工作台；未见作者开发方式声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "unknown"
+      }
+    },
+    {
+      "id": "REAL-012",
+      "repository": "ZCodium-project/ZCodium",
+      "source_url": "https://github.com/ZCodium-project/ZCodium",
+      "readme_url": "https://github.com/ZCodium-project/ZCodium/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.216461+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "ZCodium，Independent audit fork of ZCode (ZCode → ZCodium). All monitoring and telemetry removed; upstream commits reviewed one by one. ZCode 的独立审计分支（ZCode → ZCodium）：已移除监控与遥测，上游改动逐提交审阅。",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "AI coding workspace 的审计分支；审阅上游提交不等于声明 AI 编写。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "unknown"
+      }
+    },
+    {
+      "id": "REAL-013",
+      "repository": "pliablepixels/gap-trap",
+      "source_url": "https://github.com/pliablepixels/gap-trap",
+      "readme_url": "https://github.com/pliablepixels/gap-trap/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.218039+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Turns vibe coding into high quality code. Sets up rules and gates in your repo so AI-written code stays correct without you reviewing every line.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "为仓库设置规则与质量门禁的工程工具；管理 AI 编写代码是用途。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-014",
+      "repository": "cocode-agency/cocode",
+      "source_url": "https://github.com/cocode-agency/cocode",
+      "readme_url": "https://github.com/cocode-agency/cocode/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.222535+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Best ready-to-run DeepSeek Harness distribution: DSH desktop GUI, DSH terminal TUI, and harness integration.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "编码智能体发行版和开发环境集成；未见作者创作方式声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "unknown"
+      }
+    },
+    {
+      "id": "REAL-015",
+      "repository": "sololabstr/uisight",
+      "source_url": "https://github.com/sololabstr/uisight",
+      "readme_url": "https://github.com/sololabstr/uisight/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.227151+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Your AI can already see the screen — it just can't measure it. Live mobile+desktop sessions, a measurement engine (contrast, touch targets, theme drift) reporting findings as text, and a panel you and your agent share. M",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "为智能体提供 UI 测量能力的 MCP server；兼容工具名单是功能信息。",
+      "prediction_before_review": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-016",
+      "repository": "deepnovacore/NovaPersonalAgent",
+      "source_url": "https://github.com/deepnovacore/NovaPersonalAgent",
+      "readme_url": "https://github.com/deepnovacore/NovaPersonalAgent/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.231416+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "open sourced personal agent + dual-brain voice assistant.  开源个人助手 + 前后脑语音助手. restrained proactivity, wide context. 主动但不啰嗦，懂你所想，帮你所需",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向个人上下文与交互的助手；Voice Vibe Coding 描述功能，非创作方式。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-017",
+      "repository": "theguysudo/ENZO",
+      "source_url": "https://github.com/theguysudo/ENZO",
+      "readme_url": "https://github.com/theguysudo/ENZO/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.239732+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Self-hosted AI workspace with agents, skills, and tools (Gmail, Calendar) that runs entirely on your own provider API keys (BYOK). Bring your own keys — Groq, OpenRouter, NVIDIA, Hugging Face, Google AI.",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "个人自托管 AI 工作空间；cursor-reactive dot grid 指鼠标效果，并非 Cursor 开发工具证据。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-018",
+      "repository": "keith-yan/vibe-service-guardian",
+      "source_url": "https://github.com/keith-yan/vibe-service-guardian",
+      "readme_url": "https://github.com/keith-yan/vibe-service-guardian/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.243676+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Local-first service attribution, stale development server detection, AI runtime health monitoring, and open-weight model capacity planning.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "本机开发服务溯源、模型容量与运行监控工具；面向 Vibe Coding 场景不是作者声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-019",
+      "repository": "ckryptickunal/OpenDesigner",
+      "source_url": "https://github.com/ckryptickunal/OpenDesigner",
+      "readme_url": "https://github.com/ckryptickunal/OpenDesigner/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.245577+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "A free, open-source add-on for Claude, ChatGPT, Codex and Cursor that turns a few plain answers into a design system, so everything you build looks like it belongs together.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "附加到 AI 编程工具的设计系统能力；作为工具插件，不是创作者开发方式声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-020",
+      "repository": "TaewoooPark/Motifcode",
+      "source_url": "https://github.com/TaewoooPark/Motifcode",
+      "readme_url": "https://github.com/TaewoooPark/Motifcode/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.254147+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "A coding agent harness built specifically for Motif-3",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向指定模型的 coding agent harness；兼容其他编码工具未证明作者开发方式。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-021",
+      "repository": "shauryagangrade/awesome-ai-prompts",
+      "source_url": "https://github.com/shauryagangrade/awesome-ai-prompts",
+      "readme_url": "https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.260093+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Curated copy-paste AI prompts for developers - disciplined workflows for AI coding agents that verify, don't guess",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "提示词与流程集合；列出 Copilot 或 Cursor 是使用说明。",
+      "prediction_before_review": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-022",
+      "repository": "terminalworld/OpenRUA",
+      "source_url": "https://github.com/terminalworld/OpenRUA",
+      "readme_url": "https://github.com/terminalworld/OpenRUA/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.262891+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Vibe Roboting with OpenRUA. Let Your Claude Code or Codex Control Any Robot, Real or Simulated",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "把编码智能体接到机器人上的开发集成；让 Codex 控制机器人是功能描述。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-023",
+      "repository": "ShuaiKeAng/OpenSuperCV",
+      "source_url": "https://github.com/ShuaiKeAng/OpenSuperCV",
+      "readme_url": "https://github.com/ShuaiKeAng/OpenSuperCV/blob/master/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.265744+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "AI-driven intelligent clipboard turns scattered content across applications into a searchable, editable AI context. It features a clean, elegant interface with smooth animations and offers rich item management capabiliti",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向用户的剪贴板生产力应用；使用 agent 处理内容不代表作者使用 AI 开发。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "unknown"
+      }
+    },
+    {
+      "id": "REAL-024",
+      "repository": "kulchankas/paranoid",
+      "source_url": "https://github.com/kulchankas/paranoid",
+      "readme_url": "https://github.com/kulchankas/paranoid/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.268783+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Your app is guilty until proven secure: an agent skill whose /hack-me breaks into your own running app, proves each bug with a real request, patches it, and re-verifies. Claude Code · Codex · Cursor.",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "编码智能体的渗透测试技能；用途说明和参考条目不是此项目自身的开发声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": true
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-025",
+      "repository": "aviaryan/awesome-ai-games",
+      "source_url": "https://github.com/aviaryan/awesome-ai-games",
+      "readme_url": "https://github.com/aviaryan/awesome-ai-games/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.271775+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "A curated list of classic-style games remade or built from scratch with AI, all playable in the browser.",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "AI 游戏列表；其他项目声明与相关清单不能作为该目录自身的创作证据。",
+      "prediction_before_review": {
+        "kind": "resource",
+        "ai_development_confirmed": true
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-026",
+      "repository": "rahatarch/brud",
+      "source_url": "https://github.com/rahatarch/brud",
+      "readme_url": "https://github.com/rahatarch/brud/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.275144+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Full AI-assisted coding platform for manual paste-and-apply workflows — no API keys, no subscriptions, no setup.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "AI 编程平台与本地 daemon 基础设施；没有明确作者创作方式声明。",
+      "prediction_before_review": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "unknown"
+      }
+    },
+    {
+      "id": "REAL-027",
+      "repository": "Halaska-Studio/ui",
+      "source_url": "https://github.com/Halaska-Studio/ui",
+      "readme_url": "https://github.com/Halaska-Studio/ui/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.276505+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Halaska UI: a single-file React UI kit for AI products, built on shadcn/ui. 40 AI UX patterns and 90 components for agents, chat and generative UI.",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "React UI kit 与组件库；把提示词交给智能体是使用说明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-028",
+      "repository": "digitaldonusum/vibebreaker",
+      "source_url": "https://github.com/digitaldonusum/vibebreaker",
+      "readme_url": "https://github.com/digitaldonusum/vibebreaker/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.279520+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "20-pass adversarial audit for vibe-coded software. Injection, IDOR, races, N+1, idempotency, transactions, memory leaks — then a false-positive verifier.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "软件审计 CLI 与协议；审计 vibe-coded 软件不等于自身 vibe-coded。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": true
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-029",
+      "repository": "songyang0603/ds-spec-loop",
+      "source_url": "https://github.com/songyang0603/ds-spec-loop",
+      "readme_url": "https://github.com/songyang0603/ds-spec-loop/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.281483+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Portable Agent Skill for repository-native Spec programming, informed by public DeepSeek Harness engineering patterns.",
+      "expected": {
+        "kind": "resource",
+        "ai_development_confirmed": false
+      },
+      "review_note": "编码智能体的 Spec 技能包；安装命令和兼容工具名单不是作者声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "resource",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-030",
+      "repository": "Team-Quaver/quaver-music",
+      "source_url": "https://github.com/Team-Quaver/quaver-music",
+      "readme_url": "https://github.com/Team-Quaver/quaver-music/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.282502+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "本软件系 Vibe Coding 的产物",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": true
+      },
+      "review_note": "QQ 音乐客户端，README 明确自述本软件系 Vibe Coding 的产物。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": true,
+        "evidence_level": "explicit"
+      }
+    },
+    {
+      "id": "REAL-031",
+      "repository": "Tilkmilk/vibe-mote",
+      "source_url": "https://github.com/Tilkmilk/vibe-mote",
+      "readme_url": "https://github.com/Tilkmilk/vibe-mote/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.286730+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "把 Google TV / Chromecast 蓝牙遥控器变成 Windows 的「按住说话 + 快捷键面板」：遥控器麦克风 → 虚拟声卡 → 输入法出字，14 个按键任意映射。纯用户态，不装驱动、不需管理员、不弹黑框；另附自带 Python 的离线包，解压双击即用。",
+      "expected": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "review_note": "面向用户的遥控器输入映射应用；支持 Codex 与 Claude Code 预设不是作者开发声明。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "application",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    },
+    {
+      "id": "REAL-032",
+      "repository": "Moeeryani/Vibe-Coding-Production-Kit",
+      "source_url": "https://github.com/Moeeryani/Vibe-Coding-Production-Kit",
+      "readme_url": "https://github.com/Moeeryani/Vibe-Coding-Production-Kit/blob/main/README.md",
+      "retrieved_at": "2026-11-09T07:53:32.785429+00:00",
+      "reviewed_at": "2026-11-09T08:01:15.290620+00:00",
+      "reviewer": "codex_agent",
+      "review_status": "agent_reviewed",
+      "excerpt": "Production-grade vibe coding framework with specs, architecture, AI agents, testing, security, code review, CI/CD, and battle-tested workflows — from idea to production.",
+      "expected": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false
+      },
+      "review_note": "带 CLI 的开发流程框架；为 AI 辅助开发提供流程不代表自身由 AI 开发。",
+      "prediction_before_review": {
+        "kind": "application",
+        "ai_development_confirmed": false
+      },
+      "prediction": {
+        "kind": "developer_tool",
+        "ai_development_confirmed": false,
+        "evidence_level": "weak"
+      }
+    }
+  ]
+}
